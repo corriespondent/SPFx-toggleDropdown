@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.0",
+    "libraryName": "header-menu",
+    "libraryId": "e2ae576e-2a5a-4e66-9aab-e326ad655b92",
+    "environment": "spo"
+  }
+}

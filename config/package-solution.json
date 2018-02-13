@@ -1,0 +1,13 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "header-menu-client-side-solution",
+    "id": "e2ae576e-2a5a-4e66-9aab-e326ad655b92",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/header-menu.sppkg"
+  }
+}

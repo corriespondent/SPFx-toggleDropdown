@@ -1,0 +1,16 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.top {
+    background: $ms-color-themePrimary;
+    padding: 10px;
+    position: relative;
+}
+
+.topMenu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: solid 1px #ccc;
+    padding: 10px;
+    z-index: 10;
+}
