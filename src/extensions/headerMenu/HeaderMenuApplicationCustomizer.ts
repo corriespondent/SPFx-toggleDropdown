@@ -13,6 +13,8 @@ import {
 import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 import { IODataWeb } from '@microsoft/sp-odata-types';
 import * as jQuery from 'jquery';
+import 'jqueryui';
+import { SPComponentLoader } from '@microsoft/sp-loader';
 import * as strings from 'HeaderMenuApplicationCustomizerStrings';
 import styles from './HeaderMenu.module.scss';
 import { escape } from '@microsoft/sp-lodash-subset'; 
@@ -118,11 +120,7 @@ export default class HeaderMenuApplicationCustomizer
       jQuery(topMenuButton).click(function(e){
         e.preventDefault();
         e.stopPropagation();
-        if (jQuery(topMenuDiv).css("display") == "none"){
-          jQuery(topMenuDiv).css("display","block");
-        } else {
-          jQuery(topMenuDiv).css("display","none");
-        }
+        jQuery(topMenuDiv).toggle();
       });
     }
     
@@ -138,5 +136,11 @@ export default class HeaderMenuApplicationCustomizer
 
   private _onDispose(): void {
     console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top placeholder.');
+  }
+
+  public constructor() {
+    super();
+ 
+    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
   }
 }
